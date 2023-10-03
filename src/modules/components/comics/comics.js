@@ -1,6 +1,7 @@
 import { API_URL, URL_COMICS, URL_CHARACTERS, ROOT_INDEX } from '../../constants';
 import { getDataApiEx } from '../../getDataApi';
 import Error from '../error/error';
+import Characters from '../characters/characters';
 import './comics.scss';
 
 class Comics {
@@ -40,7 +41,7 @@ class Comics {
             let dataUri = element.getAttribute('data-uri');
 
             element.addEventListener('click', () => {
-                console.log(dataUri)
+                Characters.render(dataUri);
             })
         })
     }
